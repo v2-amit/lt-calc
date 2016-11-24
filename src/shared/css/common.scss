@@ -1,4 +1,277 @@
 $color: #f5f5f5;
+
 .lightestgray {
     background: $color;
+}
+
+.mt-xl {
+    margin-top: 40px !important;
+}
+
+.jcf-select {
+    transition: all .3s;
+}
+
+.jcf-select, .jcf-select .jcf-select-text {
+    cursor: pointer;
+}
+
+.jcf-select .jcf-select-drop {
+    left: -1px;
+}
+
+.jcf-select .jcf-select-opener {
+    width: 20px;
+}
+
+.bg-green {
+    background-color: #7ac141;
+}
+
+.bg-red {
+    background-color: #ff4d07;
+}
+
+.bg-violet {
+    background-color: #a3509f;
+}
+
+.bg-blue {
+    background-color: #00aeef;
+}
+
+.bg-orange {
+    background-color: #ffa800;
+}
+
+.float-none {
+    float: none !important;
+}
+
+input[type=text] {
+    margin: 0 0 10px;
+}
+
+.calc-section .form-group {
+    margin-bottom: 20px;
+}
+
+.calc-section .input-group-addon {
+    font-size: 16px;
+}
+
+.calc-section input {
+    margin-bottom: 0;
+}
+
+.calc-inputs label {
+    display: block;
+}
+
+.calc-inputs select {
+    font-size: 16px;
+    color: #333;
+    width: 100%;
+    min-height: 48px;
+    background: url(/dist/select-arrow.svg?) 93% 50% no-repeat #fff;
+    background-size: 21px;
+    border: 1px solid #dadada;
+    padding-left: 15px;
+    cursor: pointer;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    transition: all .3s;
+}
+
+.calc-inputs select:focus {
+    border-color: #2cace3;
+}
+
+select::-ms-expand {
+    display: none;
+}
+
+.calc-question {
+    font-size: 1.1em;
+    position: relative;
+    top: 2px;
+}
+
+.calc-question:focus {
+    text-decoration: none;
+}
+
+.calc-tooltip {
+    position: relative;
+}
+
+.calc-tooltip:hover .tooltip-content {
+    display: block;
+}
+
+.tooltip-trigger {
+    color: #00aeef;
+    cursor: pointer;
+}
+
+.tooltip-content {
+    color: #fff;
+    font-size: 13px;
+    line-height: normal;
+    background: #7ac243;
+    width: 170px;
+    padding: 10px 15px;
+    position: absolute;
+    left: 50%;
+    bottom: 26px;
+    margin-left: -85px;
+    z-index: 2;
+    display: none;
+}
+
+.tooltip-content:after {
+    content: "";
+    width: 0;
+    height: 0;
+    border-left: 9px solid transparent;
+    border-right: 9px solid transparent;
+    border-top: 7px solid #7ac243;
+    position: absolute;
+    bottom: -7px;
+    left: 50%;
+    margin-left: -10px;
+}
+
+.advance-calc {
+    display: none;
+}
+
+.advance-calc-trigger {
+    margin-bottom: 5px;
+    padding: 10px 0;
+    cursor: pointer;
+    transition: all .3s;
+}
+
+.advance-calc-trigger:hover, .advance-calc-trigger.rotate-90 {
+    color: #00aeef;
+}
+
+.advance-calc-trigger .lt {
+    font-size: 20px;
+    font-weight: bold;
+    font-weight: normal \9;
+    color: #00aeef;
+    transition: all .3s;
+}
+
+.advance-calc-trigger:hover .lt, .advance-calc-trigger.rotate-90 .lt {
+    margin-right: 20px;
+    transform: rotate(90deg);
+}
+
+.btn-calc {
+    margin-top: 20px;
+}
+
+.calc-graph-section {
+    margin-top: 45px;
+}
+
+.calc-graph {
+    float: right;
+}
+
+.calc-graph-info {
+    margin-top: 15px;
+}
+
+.calc-graph-info li {
+    padding: 7px 0;
+}
+
+.calc-graph-info .title {
+    border-bottom: 1px solid #DEDFDE;
+    padding-bottom: 10px;
+    margin-bottom: 7px;
+}
+
+.calc-graph-info .title .graph-title {
+    font-weight: 600;
+    padding: 0;
+}
+
+.calc-graph-info .graph-title {
+    color: #000;
+    font-weight: normal;
+    text-shadow: none;
+}
+
+.calc-graph-info .graph-bullet {
+    color: #659C0A;
+    width: 14px;
+    height: 14px;
+    margin: 4px 10px 0 0;
+    float: left;
+}
+
+.calc-graph-info .graph-amount {
+    font-weight: 600;
+    color: #333;
+    float: right;
+}
+
+.calculate-amount {
+    font-size: 80px;
+    font-weight: 300;
+    color: #78bc3f;
+    display: block;
+    line-height: normal;
+    white-space: nowrap;
+}
+
+.monthly-payments-table {
+    margin: 0;
+    list-style: none;
+}
+
+.monthly-payments-table .trigger {
+    font-size: 27px;
+    color: #02adf2;
+    font-weight: 300;
+    padding: 10px 0 13px;
+    cursor: pointer;
+}
+
+.monthly-payments-table .trigger .glyphicon {
+    font-size: 20px;
+}
+
+.monthly-payments-table .table {
+    font-size: 14px;
+}
+
+.monthly-payments-table .table th {
+    font-weight: 600;
+}
+
+.monthly-payments-table .table th, .monthly-payments-table .table td {
+    line-height: 2em;
+    padding-left: 30px;
+}
+
+
+@media (max-width:992px) {
+    .calc-graph {
+        float: none;
+        text-align: center;
+    }
+}
+
+@media (max-width: 480px) {
+    .btn {
+        padding: .6em 0;
+        width: 100%;
+    }
 }

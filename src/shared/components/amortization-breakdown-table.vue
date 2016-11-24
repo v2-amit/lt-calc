@@ -1,29 +1,40 @@
 <template>
-    <div>
-        <div v-for="(yearData, year) in amortizationBreakdown">
-            {{ year }}
-            <ul v-for="monthData in yearData">
-                <li>
-                    {{ monthData.namedMonth }}
-                </li>
-                <li>
-                    {{ monthData.payment }}
-                </li>
-                <li>
-                    {{ monthData.principal }}
-                </li>
-                <li>
-                    {{ monthData.interestPaid }}
-                </li>
-                <li>
-                    {{ monthData.totalInterest }}
-                </li>
-                <li>
-                    {{ monthData.balance }}
-                </li>
-            </ul>
+  <div>
+    <h2 class="mt-md mb-md">
+      Your <strong>monthly payments</strong> broken down
+    </h2>
+    <ul class="monthly-payments-table">
+      <li v-for="(yearData, year) in amortizationBreakdown">
+        <div class="trigger">
+          <span class="glyphicon glyphicon-minus-sign"></span> {{ year }}
         </div>
-    </div>
+        <div class="table-responsive">
+          <table class="table table-striped table-hover table-condensed">
+            <thead>
+              <tr>
+                <th width="17%">Month</th>
+                <th width="17%">Payment</th>
+                <th width="16%">Principal</th>
+                <th width="17%">Interest Paid</th>
+                <th width="17%">Total Interest</th>
+                <th width="16%">Balance</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr v-for="monthData in yearData">
+                <td>{{ monthData.namedMonth }}</td>
+                <td>{{ monthData.payment }}</td>
+                <td>{{ monthData.principal }}</td>
+                <td>{{ monthData.interestPaid }}</td>
+                <td>{{ monthData.totalInterest }}</td>
+                <td>{{ monthData.balance }}</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </li>
+    </ul>
+  </div>
 </template>
 <script>
     import AmortizationBreakdownHelper from '../helpers/amortization-breakdown'

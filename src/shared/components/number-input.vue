@@ -5,6 +5,7 @@
           <span v-once v-if="alignLeft" class="input-group-addon">{{ symbol }}</span>
           <input
               class="form-control"
+              type="text"
               ref="input"
               :value="value"
               @input="updateValue($event.target.value)"
