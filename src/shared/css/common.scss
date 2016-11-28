@@ -52,6 +52,10 @@ input[type=text] {
     margin: 0 0 10px;
 }
 
+.calc-section {
+    margin-top: 40px;
+}
+
 .calc-section .form-group {
     margin-bottom: 20px;
 }
@@ -62,6 +66,12 @@ input[type=text] {
 
 .calc-section input {
     margin-bottom: 0;
+    padding-top: 0;
+    padding-bottom: 0;
+}
+
+.calc-section input::-ms-clear {
+    display: none;
 }
 
 .calc-inputs label {
@@ -72,9 +82,8 @@ input[type=text] {
     font-size: 16px;
     color: #333;
     width: 100%;
-    min-height: 48px;
-    background: url(/dist/select-arrow.svg?) 93% 50% no-repeat #fff;
-    background-size: 21px;
+    height: 48px;
+    background: url(/src/shared/images/select-arrow.jpg) 98% no-repeat #fff;
     border: 1px solid #dadada;
     padding-left: 15px;
     cursor: pointer;
@@ -82,6 +91,10 @@ input[type=text] {
     -moz-appearance: none;
     appearance: none;
     transition: all .3s;
+}
+
+.calc-inputs select option {
+    padding-left: 15px;
 }
 
 .calc-inputs select:focus {
@@ -222,6 +235,15 @@ select::-ms-expand {
     float: right;
 }
 
+.calculate-amount-section {
+    margin-top: 140px;
+    margin-bottom: 0;
+}
+
+.calculate-amount-section h3 {
+    margin-bottom: 10px;
+}
+
 .calculate-amount {
     font-size: 80px;
     font-weight: 300;
@@ -269,9 +291,40 @@ select::-ms-expand {
     }
 }
 
+@media (max-width: 768px) {
+    h2, .h2 {
+        font-size: 32px;
+        line-height: 40px;
+    }
+}
+
+
+@media (max-width: 767px) {
+    .calculate-amount-section {
+        border-bottom: dashed 1px #ddd;
+        margin-top: 0;
+        margin-bottom: 20px;
+        padding-bottom: 25px;
+    }
+
+    .calculate-amount {
+        font-size: 55px;
+    }
+}
+
 @media (max-width: 480px) {
     .btn {
         padding: .6em 0;
         width: 100%;
+    }
+
+    .calculate-amount-section h3 {
+        font-weight: normal;
+        font-size: 18px;
+        margin: 0;
+    }
+
+    .calculate-amount {
+        font-size: 45px;
     }
 }

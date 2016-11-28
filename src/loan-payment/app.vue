@@ -12,8 +12,8 @@
           <a class="btn btn-blue btn-arrow btn-block btn-calc">Calculate</a>
         </div>
       </div>
-      <div class="col-xs-12 col-sm-7 col-md-push-0 col-md-8 col-lg-7 col-lg-push-1 text-center">
-        <h3 class="mt-sm mb-sm">Your monthly payment will be:</h3>
+      <div class="col-xs-12 col-sm-7 col-md-push-0 col-md-8 col-lg-7 col-lg-push-1 text-center calculate-amount-section">
+        <h3>Your monthly payment will be:</h3>
         <span class="calculate-amount">{{ MonthlyPayment  }}</span>
       </div>
     </div>
