@@ -1,27 +1,249 @@
-$color: #f5f5f5;
-
-.lightestgray {
-    background: $color;
+/* reset css */
+* {
+    margin: 0;
+    padding: 0;
 }
 
-.mt-xl {
-    margin-top: 40px !important;
+*, :after, :before {
+    box-sizing: border-box;
 }
 
-.jcf-select {
+html {
+    -webkit-font-smoothing: antialiased;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
+body {
+    font-family: Open Sans,Arial,Sans-Serif;
+    font-size: 14px;
+    color: #666666;
+    line-height: 1.6em;
+    background-color: #fff;
+    margin: 0;
+    padding: 0;
+}
+
+img {
+    max-width: 100%;
+    border: none;
+    outline: none;
+}
+
+hr {
+    margin: 20px 0;
+    border-top: 1px solid #ddd;
+}
+
+a {
+    color: #00aeef;
+    text-decoration: none;
     transition: all .3s;
 }
 
-.jcf-select, .jcf-select .jcf-select-text {
+a:hover {
+    text-decoration: none;
+}
+
+.clear-fix {
+    clear: both;
+}
+
+input:-webkit-autofill, input:-webkit-autofill:hover, input:-webkit-autofill:focus, input:-webkit-autofill:active {
+    -webkit-box-shadow: 0 0 0px 1000px white inset;
+    color: #fff;
+}
+
+h1, h2, h3, h4, h5, .h1, .h2, .h3, .h4, .h5 {
+    font-family: inherit;
+    font-weight: 300;
+    line-height: 1.3em;
+    color: #333333;
+    letter-spacing: -.01em;
+    margin: 0;
+}
+
+h1, .h1 {
+    font-size: 3.857em;
+    margin-bottom: 1.25em;
+}
+
+h2, .h2 {
+    font-size: 2.857em;
+    margin-bottom: 1.25em;
+}
+
+h3, .h3 {
+    font-size: 1.929em;
+    font-weight: 300;
+    margin-bottom: 1.8em;
+}
+
+h4, .h4 {
+    font-size: 1.289em;
+    font-weight: 700;
+    margin-bottom: 1em;
+}
+
+h5, .h5 {
+    font-size: 1.143em;
+    font-weight: 700;
+    margin-bottom: 1em;
+    text-transform: uppercase;
+}
+
+p {
+    font-size: 1em;
+    margin: 0 0 10px;
+    margin-bottom: 2em;
+    line-height: 1.7em;
+}
+
+input, select, textarea, button {
+    font-family: Open Sans, Arial, Sans-Serif;
+    outline: none;
+}
+
+input[type=text], input[type=number], input[type=tel] {
+    display: inline-block;
+    vertical-align: top;
+    position: relative;
+    border: 1px solid #dadada;
+    background: #fff;
+    margin: 0 0 12px;
+    min-width: 150px;
+    width: 100%;
+    height: 48px;
+    color: #333;
+    padding: 15px;
+    font-size: 16px;
+    line-height: 47px;
+    border-radius: 0;
+}
+
+input[type=text]:focus, input[type=number]:focus, input[type=tel]:focus {
+    border: 1px solid #2cace3;
+    outline: 0;
+    box-shadow: none;
+    background: #edf5f8;
+}
+
+.input-group-addon {
+    background-color: #fff;
+    border: 1px solid #dadada;
+    border-radius: 0;
+}
+
+.display-none {
+    display: none;
+}
+
+.display-block {
+    display: block;
+}
+
+.float-none {
+    float: none !important;
+}
+
+.mt-none {
+    margin-top: 0 !important;
+}
+
+
+/* btn css */
+.btn {
+    display: inline-block;
+    padding: .6em 2.1em;
+    margin: 40px 0 0 0;
+    font-size: 1.29em;
+    font-weight: normal;
+    line-height: 1.42857143;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: middle;
+    -ms-touch-action: manipulation;
+    touch-action: manipulation;
     cursor: pointer;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    background-image: none;
+    border: 1px solid transparent;
+    border-radius: 2px;
+    color: #fff;
+    transition: all 0.1s ease;
 }
 
-.jcf-select .jcf-select-drop {
-    left: -1px;
+.btn:focus, .btn:active:focus, .btn.active:focus, .btn.focus, .btn.focus:active, .btn.active.focus {
+    outline: thin dotted;
+    outline: 5px auto -webkit-focus-ring-color;
+    outline-offset: -2px;
 }
 
-.jcf-select .jcf-select-opener {
-    width: 20px;
+.btn:hover, .btn:focus, .btn.focus {
+    color: #fff;
+    text-decoration: none;
+}
+
+.btn:active, .btn.active {
+    background-image: none;
+    outline: 0;
+    -webkit-box-shadow: inset 0 3px 5px rgba(0, 0, 0, .125);
+    box-shadow: inset 0 3px 5px rgba(0, 0, 0, .125);
+}
+
+.btn span {
+    display: inline-block;
+    float: right;
+    width: 1em;
+    text-align: center;
+    font-size: 1em;
+    font-weight: 800;
+    margin: .2em -1.6em 0 .6em;
+    padding: 0;
+    pointer-events: none;
+}
+
+.btn-block, .btn-fullwidth {
+    display: block;
+    width: 100%;
+}
+
+.btn-arrow,
+.btn-arrow:hover {
+    background-image: url('../images/btn-arrow.svg');
+    background-repeat: no-repeat;
+    background-position: calc(100% - 20px) center;
+    padding-right: 2.7em;
+}
+
+.btn-orange {
+    background-color: #ffa800;
+    text-shadow: 0 1px 1px #d28c00;
+}
+
+.btn-orange:hover, .btn-orange:active, .btn-orange:focus {
+    background-color: #ff9200;
+}
+
+.btn-blue {
+    background-color: #00aeef;
+    text-shadow: 0 1px 1px #009ed9;
+}
+
+.btn-blue:hover, .btn-blue:active, .btn-blue:focus {
+    background-color: #2F86D4;
+}
+
+.btn-gray {
+    background-color: #e1e1e1;
+    color: #666666;
+}
+
+.btn-gray:hover, .btn-gray:active, .btn-gray:focus {
+    color: #666666;
+    background-color: #c1c1c1;
 }
 
 .bg-green {
@@ -44,16 +266,17 @@ $color: #f5f5f5;
     background-color: #ffa800;
 }
 
-.float-none {
-    float: none !important;
-}
 
-input[type=text] {
-    margin: 0 0 10px;
-}
 
+/* calac section */
 .calc-section {
     margin-top: 40px;
+    width: auto;
+    max-width: 1170px;
+}
+
+.calc-section h2 {
+    margin-bottom: .5em;
 }
 
 .calc-section .form-group {
@@ -74,11 +297,18 @@ input[type=text] {
     display: none;
 }
 
-.calc-inputs label {
+.calc-filter {
+    background: #f5f5f5;
+    margin-bottom: 50px;
+    padding: 40px;
+}
+
+.calc-filter label {
+    font-weight: 400;
     display: block;
 }
 
-.calc-inputs select {
+.calc-filter select {
     font-size: 16px;
     color: #333;
     width: 100%;
@@ -93,11 +323,11 @@ input[type=text] {
     transition: all .3s;
 }
 
-.calc-inputs select option {
+.calc-filter select option {
     padding-left: 15px;
 }
 
-.calc-inputs select:focus {
+.calc-filter select:focus {
     border-color: #2cace3;
 }
 
@@ -236,7 +466,7 @@ select::-ms-expand {
 }
 
 .calculate-amount-section {
-    margin-top: 140px;
+    margin-top: 80px;
     margin-bottom: 0;
 }
 
@@ -253,9 +483,22 @@ select::-ms-expand {
     white-space: nowrap;
 }
 
+.next-step {
+    font-weight: bold;
+    color: #333;
+    font-size: 18px;
+    margin: 20px 0 15px;
+}
+
 .monthly-payments-table {
     margin: 0;
     list-style: none;
+}
+
+.monthly-payments-table li {
+    margin: 0;
+    padding: 10px 0;
+    border-top: solid #eee 1px;
 }
 
 .monthly-payments-table .trigger {
@@ -264,14 +507,30 @@ select::-ms-expand {
     font-weight: 300;
     padding: 10px 0 13px;
     cursor: pointer;
+    transition: all .4s;
+}
+
+.monthly-payments-table .trigger.active .glyphicon-plus-sign:before {
+    content: "\e082";
 }
 
 .monthly-payments-table .trigger .glyphicon {
     font-size: 20px;
 }
 
+.monthly-payments-table .table-responsive {
+    max-height: 0;
+    overflow-y: hidden;
+    transition: all .6s ease-in-out;
+}
+
+.monthly-payments-table .table-responsive.active {
+    max-height: 100%;
+}
+
 .monthly-payments-table .table {
     font-size: 14px;
+    margin: 0;
 }
 
 .monthly-payments-table .table th {
@@ -280,10 +539,11 @@ select::-ms-expand {
 
 .monthly-payments-table .table th, .monthly-payments-table .table td {
     line-height: 2em;
-    padding-left: 30px;
+    padding-left: 26px;
 }
 
 
+/* max viewport css */
 @media (max-width:992px) {
     .calc-graph {
         float: none;
@@ -296,10 +556,18 @@ select::-ms-expand {
         font-size: 32px;
         line-height: 40px;
     }
+
+    h3, .h3 {
+        margin-bottom: .5em;
+    }
 }
 
-
 @media (max-width: 767px) {
+    .calc-filter {
+        margin-bottom: 30px;
+        padding: 30px;
+    }
+
     .calculate-amount-section {
         border-bottom: dashed 1px #ddd;
         margin-top: 0;
@@ -310,12 +578,30 @@ select::-ms-expand {
     .calculate-amount {
         font-size: 55px;
     }
+
+    .monthly-payments-table .table-responsive {
+        border: none;
+        margin-bottom: 0;
+    }
 }
 
 @media (max-width: 480px) {
+    h1 {
+        font-size: 2.57em;
+    }
+
+    h2 {
+        font-size: 2.2857em;
+    }
+
     .btn {
         padding: .6em 0;
         width: 100%;
+        display: block;
+    }
+
+    .calc-filter {
+        padding: 20px;
     }
 
     .calculate-amount-section h3 {

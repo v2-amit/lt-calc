@@ -1,12 +1,12 @@
 <template>
   <div>
-    <h2 class="mt-md mb-md">
+    <h2>
       Your <strong>monthly payments</strong> broken down
     </h2>
     <ul class="monthly-payments-table">
       <li v-for="(yearData, year) in amortizationBreakdown">
         <div class="trigger">
-          <span class="glyphicon glyphicon-minus-sign"></span> {{ year }}
+          <span class="glyphicon glyphicon-plus-sign"></span> {{ year }}
         </div>
         <div class="table-responsive">
           <table class="table table-striped table-hover table-condensed">
@@ -56,4 +56,14 @@
             }
         }
     }
+    window.onload = function() {
+      var accordion = document.getElementsByClassName("trigger");
+      var accordionTable;
+      for (accordionTable = 0; accordionTable < accordion.length; accordionTable++) {
+        accordion[accordionTable].onclick = function () {
+          this.classList.toggle("active");
+          this.nextElementSibling.classList.toggle("active");
+        }
+      }
+    };
 </script>

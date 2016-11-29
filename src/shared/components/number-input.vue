@@ -1,6 +1,8 @@
 <template>
     <div class="form-group">
-      <label v-if="label">{{ label }}</label>
+      <label v-if="label">
+        {{ label }} <a href="#" class="glyphicon glyphicon-question-sign calc-question"></a>
+      </label>
       <div class="input-group">
           <span v-once v-if="alignLeft" class="input-group-addon">{{ symbol }}</span>
           <input

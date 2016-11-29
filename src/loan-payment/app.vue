@@ -2,19 +2,24 @@
   <div class="container calc-section">
     <div class="row">
       <div class="col-xs-12 col-sm-5 col-md-4 col-lg-4">
-        <div class="calc-inputs padding40 lightestgray mb-lg">
+        <div class="calc-filter">
           <form>
             <h4 class="text-capitalize">Monthly Loan Cost</h4>
             <number-input label="Loan Amount:" v-model="LoanAmount"></number-input>
             <number-input label="Interest Rate:" v-model="InterestRate" symbol="%" symbolaligned="right" precision="3"></number-input>
             <loan-term-in-years-input label="Loan Term:" v-model="LoanTermInYears"></loan-term-in-years-input>
+            <a href="javascript:void(0);" class="btn btn-blue btn-arrow btn-block btn-calc">Calculate</a>
           </form>
-          <a class="btn btn-blue btn-arrow btn-block btn-calc">Calculate</a>
         </div>
       </div>
       <div class="col-xs-12 col-sm-7 col-md-push-0 col-md-8 col-lg-7 col-lg-push-1 text-center calculate-amount-section">
         <h3>Your monthly payment will be:</h3>
         <span class="calculate-amount">{{ MonthlyPayment  }}</span>
+        <label class="next-step">Ready for the next step?</label>
+        <form action="/redirect/offers" method="get" role="form" novalidate="novalidate">
+          <input id="splitterid" name="id" type="hidden" value="ns-calc-loan-payment" />
+          <button class="btn btn-blue btn-arrow mt-none" type="submit">Get Free Loan Offers <span class="lt lt-arrow_thin"></span></button>
+        </form>
       </div>
     </div>
     <div class="row">
