@@ -38,7 +38,7 @@
 </template>
 <script>
     import AmortizationBreakdownHelper from '../helpers/amortization-breakdown'
-    import calcTable from '../css/calc-table.scss'
+    import calcTable from '../css/amortization-breakdown-table.scss'
 
     export default {
         props: {

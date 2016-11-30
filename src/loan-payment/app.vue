@@ -36,7 +36,7 @@
     import LoanTermInYearsInput from '../shared/components/loan-term-in-years-input.vue'
     import Accounting from 'accounting'
     import PaymentHelper from '../shared/helpers/payment'
-    import calcStyle from '../shared/css/calc-filter-calculation.scss'
+    import calcStyle from '../shared/css/calc-filter-output.scss'
 
     export default {
         data () {
