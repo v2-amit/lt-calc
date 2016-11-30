@@ -1,0 +1,61 @@
+@import "variables";
+
+.monthly-payments-table {
+    list-style: none;
+    margin: 0;
+
+    li {
+        margin: 0;
+        padding: 10px 0;
+        border-top: solid #eee 1px;
+
+        .trigger {
+            font-size: 27px;
+            color: #02adf2;
+            font-weight: 300;
+            padding: 10px 0 13px;
+            cursor: pointer;
+            transition: all .4s;
+
+            .glyphicon {
+                font-size: 20px;
+            }
+
+            &.active .glyphicon-plus-sign:before {
+                content: "\e082";
+            }
+        }
+
+        .table-responsive {
+            max-height: 0;
+            overflow-y: hidden;
+            transition: all .6s ease-in-out;
+
+            @media #{$mob-landscape-view} {
+                border: none;
+                margin-bottom: 0;
+            }
+
+            &.active {
+                max-height: 100%;
+            }
+
+            .table {
+                font-size: 14px;
+                color: #333;
+                margin: 0;
+
+                th {
+                    font-weight: 600;
+                    line-height: 2em;
+                    padding-left: 26px;
+                }
+
+                td {
+                    line-height: 2em;
+                    padding-left: 26px;
+                }
+            }
+        }
+    }
+}

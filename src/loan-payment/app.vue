@@ -18,7 +18,7 @@
         <label class="next-step">Ready for the next step?</label>
         <form action="/redirect/offers" method="get" role="form" novalidate="novalidate">
           <input id="splitterid" name="id" type="hidden" value="ns-calc-loan-payment" />
-          <button class="btn btn-blue btn-arrow mt-none" type="submit">Get Free Loan Offers <span class="lt lt-arrow_thin"></span></button>
+          <button class="btn btn-blue btn-arrow mt-none" type="submit">Get Free Loan Offers</button>
         </form>
       </div>
     </div>
@@ -36,8 +36,7 @@
     import LoanTermInYearsInput from '../shared/components/loan-term-in-years-input.vue'
     import Accounting from 'accounting'
     import PaymentHelper from '../shared/helpers/payment'
-
-    import style from '../shared/css/common.scss'
+    import calcStyle from '../shared/css/calc-filter-calculation.scss'
 
     export default {
         data () {
